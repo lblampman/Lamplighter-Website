@@ -1,23 +1,24 @@
-/* Global */
+/* colors:
+    bg & light text: BGBGBG
+    dark bg, hdr, nav, footer: 8A2231
+    hilight: A89A5E
+*/
 
+/* global settings */
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   line-height: 1.5;
   padding: 0;
   margin: 0;
-  background-color: #F4F4F4;
+  background-color: #DAD2D0; /*was #5C7584 */
 }
 
+/* to make all containers the same width */ 
 .container {
   width: 90%;
   margin: auto;
   overflow: hidden;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 .button_1 {
@@ -37,111 +38,93 @@ ul {
   margin-bottom: 10px;
 }
 
-/* Header */
+/* items inside header container */
 header {
-  background: #35424A;
-  color: #FFFFFF;
-  padding-top: 30px;
-  min-height: 70px;
-  border-bottom: #E8491D 3px solid;
+  background: #DAD2D0;
+  color: #6B838A;
+  min-height: 50px;
+  border-bottom: #6B838A 3px solid;
+  margin-bottom: 2px;
 }
 
-header h1 {
-  font-size: 25px;
-  font-weight: 100;
-  margin-left: 100px;
-}
-
-header h1 span {
-  font-family: cursive;
-  font-size: 40px;
-}
-
-header img {
-  width: 90px;
-  float: left;
-}
-
-header a {
-  color: #FFFFFF;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
-}
-
-header li {
-  float:left;
-  display: inline;
-  padding: 0 20px 0 20px;
-}
-
+/* #branding is nested container around h1, includes <span> */
 header #branding{
   float: left;
 }
 
-header nav {
-  float:right;
-  margin-top: 10px;
+/* all the text in the <h1> header */
+header h1 {
+  font-size: 30px;
+  font-weight: 100;
+  margin-left: 0;
 }
 
-header .highlight, header .current a {
-  color: #E8491D;
+/* just the "Lamplighter" part of the <h1> header */
+header h1 span {
+  font-family: cursive;
+  font-size: 45px;
+  color: #0A2423;
   font-weight: bold;
 }
 
-header a:hover {
-  color: #CCCCCC;
-  font-weight: bold;
-}
-
-
-
-/* Showcase */
-
+/* items inside showcase container */
 #showcase {
   min-height: 400px;
   background: url("../img/showcase.jpg") no-repeat 0 -400px;
+}
+
+/* text in the middle of the background photo */
+#showcase h3 {
   text-align: center;
-  color: #FFFFFF;
+  font-size: 30px;
+  margin: 0;
 }
 
-#showcase h1 {
-  margin-top: 100px;
-  font-size: 45px;
-  margin-bottom: 10px;
+#showcase .showcase-content {
+  width: 70%;
+  margin: auto;
+  background: #0A2423;
+  color: #6B838A;
+  border-radius: 90px;
+  padding: 20px;
+  opacity: 0.7;
+  margin-top: 125px;
+
+}
+/* items inside the nav container */
+#nav {
+  min-height: 40px;
+  background: #012E20;
+  text-align: center;
 }
 
-#showcase p {
-  font-size: 20px;
+nav li {
+  display: inline;
 }
 
-#newsletter {
-  padding: 15px;
-  color: #FFFFFF;
-  background: #35424A;
+nav a {
+  color: #DBDBDB;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 0 30px 0 30px;
 }
 
-#newsletter h1 {
-  float:left;
+nav .current a {
+  font-style: italic;
+  color: #A89A5E;
 }
 
-#newsletter form {
-  float:right;
-  margin-top: 15px;
+nav a:hover {
+  color: #5C7584;
 }
 
-#newsletter input[type="email"] {
-  padding: 4px;
-  height: 25px;
-  width: 250px;
-}
-
-/* Boxes */
-
+/* Items inside the boxes container, including nested containers */
 #boxes {
   margin-top: 20px;
 }
 
+/* to align the three nested boxes */
 #boxes .box {
   float: left;
   text-align: center;
@@ -149,11 +132,12 @@ header a:hover {
   padding: 10px;
 }
 
+/* set the width of the logos to 90px */
 #boxes .box img {
   width: 90px;
 }
 
-/* Sidebar */
+/* items inside <aside> on About and Services pages */
 
 aside#sidebar {
   float: right;
@@ -183,14 +167,14 @@ ul#services li {
   background: #E6E6E6;
 }
 
-/* Footer */
+/* footer for all pages */
 
 footer {
   padding: 10px;
   margin-top: 20px;
   text-align: center;
-  background-color: #E8491D;
-  color: #FFFFFF;
+  background-color: #012E20;
+  color: #A89A5E;
 }
 
 /* Media Queries */
