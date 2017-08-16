@@ -51,13 +51,14 @@ header {
 
 header #branding {
   float: left;
+  text-align: center;
 }
 /* all the text in the <h1> header */
 
 header h1 {
   font-size: 30px;
   font-weight: 100;
-  margin-left: 0;
+  margin-left: 0
 }
 /* just the "Lamplighter" part of the <h1> header */
 
@@ -121,11 +122,12 @@ nav a:hover {
 /* items inside showcase container */
 
 #showcase {
+  background: url("../img/showcase.jpg");
+  background-size: cover;
   min-height: 400px;
-  background: url("../img/showcase.jpg") no-repeat 0 -400px;
 }
-/* items in secondary_header container */
 
+/* items in secondary_header container */
 #secondary_header {
   background: #ECEBF0;
   color: #6B838A;
@@ -205,7 +207,7 @@ footer {
 }
 /* Media Queries */
 
-@media(max-width: 800px) {
+@media(max-width: 850px) {
   header #branding,
   header #nav,
   #newsletter h1,
@@ -224,15 +226,7 @@ footer {
     width: 40%;
     margin: auto;
   }
-  #newsletter button,
-  .quote button {
-    display: block;
-    width: 100%;
-  }
-  #newsletter form input[type="email"] {
-    width: 100%;
-    margin-bottom: 5px;
-  }
+
   /* For displays smaller than 600px */
   @media(max-width: 600px) {
     header #branding,
@@ -264,4 +258,9 @@ footer {
     #newsletter form input[type="email"] {
       width: 100%;
       margin-bottom: 5px;
+    }
+
+  @media(max-width: 400px) {
+    #showcase {
+      background-size: cover;
     }
